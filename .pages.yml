@@ -20,6 +20,8 @@ content:
       - {name: date, label: Concert date, type: date, required: true}
       - {name: city, label: City, type: string, required: true}
       - {name: venue, label: Venue, type: string}
+      - {name: country, label: Country, type: string}
+      - {name: lineup, label: Others playing (one act per line), type: text}
       - {name: ticket_url, label: Ticket link, type: string}
       - name: status
         label: Status
@@ -64,6 +66,11 @@ content:
     fields:
       - {name: title, label: Release title, type: string, required: true}
       - {name: date, label: Release date, type: date}
+      - {name: label, label: Record label, type: string, default: INDIE RECORDINGS}
+      - {name: digital_date, label: Digital release date, type: date}
+      - {name: vinyl_date, label: Vinyl release date (optional), type: date}
+      - {name: cd_date, label: CD release date (optional), type: date}
+      - {name: spotify_url, label: Spotify album or single link, type: string}
       - {name: year, label: Release year, type: number, required: true}
       - {name: order, label: Display order (1 appears first), type: number, default: 10}
       - {name: image, label: Cover artwork, type: image, required: true}
