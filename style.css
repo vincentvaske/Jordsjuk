@@ -39,3 +39,7 @@ body.home-site{position:relative}.liquid-background{position:absolute;height:100
 
 /* Shared scrolling liquid background on all site pages. */
 body{position:relative}body.contact-site,body.concerts-site,body.discography-site{background:#000}body>.page{position:relative;z-index:1}.liquid-background{position:absolute;inset:0 auto auto 0;width:100%;pointer-events:none;z-index:0}
+/* Consistent uppercase navigation labels across the site. */
+nav .menu a,nav .content-nav a{text-transform:uppercase}
+/* Uppercase release names in discography and homepage record listings. */
+.release-info h2,.record h3{text-transform:uppercase}
