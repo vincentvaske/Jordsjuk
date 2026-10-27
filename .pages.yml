@@ -1,0 +1,74 @@
+media:
+  input: media/uploads
+  output: media/uploads
+  rename: random
+  extensions: [jpg, jpeg, png, webp]
+content:
+  - name: concerts
+    label: Concerts
+    type: collection
+    path: content/concerts
+    format: json
+    filename: "{fields.date}-{primary}.json"
+    view:
+      primary: title
+      fields: [title, date, city, status, published]
+      sort: date
+      order: asc
+    fields:
+      - {name: title, label: Concert name, type: string, required: true}
+      - {name: date, label: Concert date, type: date, required: true}
+      - {name: city, label: City, type: string, required: true}
+      - {name: venue, label: Venue, type: string}
+      - {name: ticket_url, label: Ticket link, type: string}
+      - name: status
+        label: Status
+        type: select
+        default: On sale
+        options:
+          values: [On sale, Sold out, Cancelled]
+      - {name: image, label: Poster, type: image}
+      - {name: image_alt, label: Describe the poster, type: string}
+      - {name: body, label: Concert details, type: text}
+      - {name: published, label: Show on website, type: boolean, default: false}
+  - name: news
+    label: News
+    type: collection
+    path: content/news
+    format: json
+    filename: "{year}-{month}-{day}-{primary}.json"
+    view:
+      primary: title
+      fields: [title, date, published]
+      sort: date
+      order: desc
+    fields:
+      - {name: title, label: Headline, type: string, required: true}
+      - {name: date, label: Publication date, type: date, required: true}
+      - {name: image, label: Article picture, type: image}
+      - {name: image_alt, label: Describe the picture, type: string}
+      - {name: body, label: Article text, type: text}
+      - {name: external_url, label: External article link (optional), type: string}
+      - {name: published, label: Show on website, type: boolean, default: false}
+  - name: releases
+    label: Releases
+    type: collection
+    path: content/releases
+    format: json
+    filename: "{primary}.json"
+    view:
+      primary: title
+      fields: [title, year, order, published]
+      sort: order
+      order: asc
+    fields:
+      - {name: title, label: Release title, type: string, required: true}
+      - {name: date, label: Release date, type: date}
+      - {name: year, label: Release year, type: number, required: true}
+      - {name: order, label: Display order (1 appears first), type: number, default: 10}
+      - {name: image, label: Cover artwork, type: image, required: true}
+      - {name: image_alt, label: Describe the cover, type: string}
+      - {name: listening_url, label: Listening or purchase link, type: string}
+      - {name: tracklist, label: Tracklist (one track per line), type: text}
+      - {name: body, label: About the release, type: text}
+      - {name: published, label: Show on website, type: boolean, default: false}
