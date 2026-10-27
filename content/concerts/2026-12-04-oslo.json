@@ -1,12 +1,14 @@
 {
-  "title": "Oslo",
+  "title": "caliban sessions",
   "city": "OSLO",
   "date": "2026-12-04",
-  "venue": "",
+  "venue": "JOHN DEE",
   "ticket_url": "",
   "status": "On sale",
   "image": "",
   "image_alt": "",
   "body": "",
-  "published": true
+  "published": true,
+  "country": "NORGE",
+  "lineup": "BLACK DEBBATH, HEIGH CHEF, SUNNY BLEACH, NÖ BULL ++"
 }

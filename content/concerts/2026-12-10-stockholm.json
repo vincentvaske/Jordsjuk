@@ -1,5 +1,5 @@
 {
-  "title": "Stockholm",
+  "title": "klubb fredagsmangel",
   "city": "STOCKHOLM",
   "date": "2026-12-10",
   "venue": "",
@@ -8,5 +8,7 @@
   "image": "",
   "image_alt": "",
   "body": "",
-  "published": true
+  "published": true,
+  "country": "SVERIGE",
+  "lineup": "JORDSJUK + REGNVM ANIMALE"
 }

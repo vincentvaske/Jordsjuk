@@ -33,6 +33,8 @@ async function loadContent(){
     const id=params.get('id');
     const visible=concerts.filter(e=>id?e.id===id:!filter.value||e.date.slice(0,10)>=filter.value);
     concertList.innerHTML=(id?'<a class="more" href="concerts.html">← All concerts</a>':'')+(visible.map(card).join('')||'<p class="concert-empty">No concerts listed for this period. Check back for new dates.</p>');
+    const past=concerts.filter(e=>e.date.slice(0,10)<today()).reverse();
+    if(!id&&filter.value===today()&&past.length)concertList.insertAdjacentHTML('beforeend',`<details class="past-concerts"><summary>Past concerts (${past.length})</summary>${past.map(card).join('')}</details>`);
    }
    filter.addEventListener('change',()=>{params.delete('id');if(filter.value)params.set('after-date',filter.value);else params.delete('after-date');history.replaceState(null,'',location.pathname+(params.size?'?'+params.toString():''));renderConcerts()});
    document.querySelector('.concert-filter').addEventListener('submit',e=>{e.preventDefault();renderConcerts()});

@@ -1,12 +1,14 @@
 {
-  "title": "Kopervik",
+  "title": "karmøygeddon metal festival",
   "city": "KOPERVIK",
   "date": "2027-01-03",
-  "venue": "",
+  "venue": "OVENPAA",
   "ticket_url": "",
   "status": "On sale",
   "image": "",
   "image_alt": "",
   "body": "",
-  "published": true
+  "published": true,
+  "country": "NORGE",
+  "lineup": "JORDSJUK + BLOOD FIRE DEATH, CHILDRE OF BODOM, DHG, KANOENFIEBER, AFSKY, AXEL RUDI PELL"
 }

@@ -1,12 +1,14 @@
 {
-  "title": "Oslo",
+  "title": "inferno festival",
   "city": "OSLO",
   "date": "2027-03-25",
-  "venue": "",
+  "venue": "JOHN DEE",
   "ticket_url": "",
   "status": "On sale",
   "image": "",
   "image_alt": "",
   "body": "",
-  "published": true
+  "published": true,
+  "country": "NORGE",
+  "lineup": "JORDSJUK + KAMPFAR, MGLA, TRELLDOM"
 }
