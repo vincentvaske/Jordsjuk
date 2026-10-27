@@ -33,13 +33,17 @@ Turn on **Show on website** and save when ready. Saving triggers the GitHub publ
 
 - Concerts sort by event date. Past concerts move to the archive automatically using the Oslo calendar date; statuses include On sale, Sold out and Cancelled. Ticket links are optional.
 - Future-dated news remains hidden until that date; the scheduled workflow rebuilds daily. The homepage checks the date on every page load too.
-- Releases use Display order, smallest first. The existing releases only have a confirmed year; their optional full release dates are left blank.
+- Releases use Display order, smallest first. Initial release dates are populated from the Framer discography.
 - Existing news entries retain links to their Framer articles because their full article text has not yet been supplied. New articles open on the local site.
 
 ## Pictures and builds
 
 Uploads are stored in `media/uploads` and remain original in GitHub. The build corrects orientation, strips metadata, caps dimensions at 1800px and converts them to quality-85 WebP. Only optimized pictures are published; drafts and source uploads are excluded from `dist/`. Original uploads still count toward repository storage, so upload web-sized pictures rather than huge master files. Existing design assets are already optimized and copied unchanged, preserving masks and transparency.
 
-The homepage displays the first five upcoming concerts, two newest news entries and three releases. Full lists and detail pages use `content.html`. Contact still links to Framer; merch and social links remain external. CMS text is escaped before rendering and outbound URL schemes are restricted to HTTP(S).
+The homepage displays the first five upcoming concerts, two newest news entries and three releases. Full lists and detail pages use `content.html`. Contact opens the local contact page; merch and social links remain external. The contact text and details currently match the supplied screenshot placeholders. CMS text is escaped before rendering and outbound URL schemes are restricted to HTTP(S).
 
 No subscription, domain changes or paid services were enabled by preparing these files.
+
+Concerts now use `concerts.html`, with a shareable After Date filter (inclusive) defaulting to today in Oslo. Each CMS entry supports venue, city, country, line-up, poster, details, status and ticket link. No background graphics appear on this page; alpha distress is applied to concert content.
+
+Discography uses `discography.html` and the Releases CMS collection. Display order controls its alternating artwork rows. Editors can set record label, digital/vinyl/CD release dates and Spotify URL independently. The initial eight releases and format dates were copied from the supplied Framer discography; review them before launch. The background is plain black.
